@@ -1,0 +1,37 @@
+    body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-left:5px;
+  padding: 0;
+width: 20%;height: 80%;background-color: #003cb3;
+border-radius:10px;
+margin-bottom:5%;
+  position: fixed;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #555;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+img{
+    width:90%;border-radius:10px;margin-left:30%;overflow:auto;
+  }
+.mySlides {display:none;}

@@ -1,0 +1,28 @@
+
+
+
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+
+{% block content%}
+    <div style="width:100%;height:25%;background-color:#003cb3;color:white;align:center;border-radius:10px;">
+        <h2 style="text-align:center;padding:10px;">Employee Details</h2>
+    </div>
+    <br/><br/>
+
+        <div class="row">
+        {% for emp in employees %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src={{  "https://banner2.kisspng.com/20180406/fuw/kisspng-cartoon-royalty-free-business-women-5ac75af38978c2.1170847115230143875631.jpg"  }} class="card-img-top" alt={{ "mouni" }}/>
+                <div class="card-body">
+                    <h5 class="card-title">{{ emp.name }}</h5>
+                    <p class="card-text">{{ emp.dept }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/homePage.css' %}" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+var myIndex = 0;
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+function menuClick(id){
+        $(".menuItem").removeClass("active");
+       var element = document.getElementById(id);
+        element.classList.add("active");
+}
+</script>
+
+{% block content%}
+
+    <div style="width:100%;height:25%;background-color:#003cb3;color:white;align:center;border-radius:10px;">
+       <h2 style="text-align:center;padding:10px;">INDEMAND IT</h2>
+    </div>
+    <br/><br/>
+    <div style="width:100%;height:75%;">
+    <div style=" ">
+        <ul>
+            <li><br/><a href="/home"  id="home" onclick="menuClick(this.id)"><strong>HOME</strong></a></li>
+            <li><a class="menuItem" href="/employees"  id="emp"  onclick="menuClick(this.id)"><strong>EMPLOYEES</strong></a></li>
+            <li><br/><a href="/home" target="_blank" id="news" onclick="menuClick(this.id)"><strong>NEWS</strong></a></li>
+             <li><br/><a href="#contact" id="contact"><strong>PHOTO GALLERY</strong></a></li>
+              <li><br/><a href="#about" id="about"><strong>ABOUT</strong></a></li>
+        </ul>
+    </div>
+
+
+    </div>
+{% endblock %}
+
+
